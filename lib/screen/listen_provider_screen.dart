@@ -26,6 +26,7 @@ class _ListenProviderScreenState extends ConsumerState<ListenProviderScreen>
   @override
   Widget build(BuildContext context) {
     ref.listen<int>(listenProvider, (previous, next) {
+      // 이전 값과 현재 값을 가지고 있다.
       if (previous != next) {
         controller.animateTo(next);
       }
