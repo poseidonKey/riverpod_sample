@@ -1,3 +1,4 @@
+import 'package:f_riverpod/riverpod/provider_observer.dart';
 import 'package:f_riverpod/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,8 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ProviderScope(
-      child: MaterialApp(
+    return ProviderScope(
+      observers: [
+        Logger(),
+      ],
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: HomeScreen(),
       ),
