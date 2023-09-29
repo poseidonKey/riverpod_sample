@@ -4,9 +4,6 @@
   StateNotifierProvider
 */
 
-import 'dart:ffi';
-
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'code_generation_provider.g.dart';
 
